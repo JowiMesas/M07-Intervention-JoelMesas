@@ -1,10 +1,12 @@
 <?php
-require_once '../vendor/autoload.php';
+
+use Intervention\Image\Drivers\Imagick\Driver;
+require_once  '../vendor/autoload.php';
 error_reporting(ENT_IGNORE);
-//print_r($_FILES["imageFile"]);
+print_r($_FILES["imageFile"]);
 
 // create object ImageManager
-$managerImage = new \Intervention\Image\ImageManager();
+$managerImage = new Intervention\image\ImageManager();
 
 // instance object to manipulate
 $imageObject = $managerImage->make($_FILES["imageFile"]["tmp_name"]);
